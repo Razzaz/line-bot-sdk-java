@@ -312,34 +312,76 @@ public class KitchenSinkController {
             case "carousel": {
                 String imageUrl = createUri("/static/buttons/1040.jpg");
                 String imageUrl1 = createUri("/static/buttons/S002.jpeg");
+                String imageUrl2 = createUri("/static/buttons/S003.jpeg");
+                String imageUrl3 = createUri("/static/buttons/S004.jpeg");
+                String imageUrl4 = createUri("/static/buttons/S005.jpeg");
+                String imageUrl5 = createUri("/static/buttons/S006.jpeg");
+                String imageUrl6 = createUri("/static/buttons/S007.jpeg");
+                String imageUrl7 = createUri("/static/buttons/S008.jpeg");
+                String imageUrl8 = createUri("/static/buttons/S009.jpeg");
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
                                 new CarouselColumn(imageUrl1, "Selada", "Rp. 15.000/Kg", Arrays.asList(
-                                        new URIAction("Go to line.me",
+                                        new URIAction("Beli",
                                                       "https://line.me"),
                                         new PostbackAction("Beli",
                                                            "hello こんにちは")
                                 )),
-                                new CarouselColumn(imageUrl, "hoge", "fuga", Arrays.asList(
-                                        new PostbackAction("言 hello2",
+                                new CarouselColumn(imageUrl2, "Kangkung", "fuga", Arrays.asList(
+                                        new PostbackAction("Beli",
                                                            "hello こんにちは",
                                                            "hello こんにちは"),
                                         new MessageAction("Say message",
                                                           "Rice=米")
                                 )),
-                                new CarouselColumn(imageUrl, "hoge", "fuga", Arrays.asList(
-                                        new PostbackAction("言 hello2",
+                                new CarouselColumn(imageUrl3, "Bok Choy", "fuga", Arrays.asList(
+                                        new PostbackAction("Beli",
                                                            "hello こんにちは",
                                                            "hello こんにちは"),
                                         new MessageAction("Say message",
                                                           "Rice=米")
-                                ))
+                                )),
+                                new CarouselColumn(imageUrl4, "Kailan", "fuga", Arrays.asList(
+                                        new PostbackAction("Beli",
+                                                           "hello こんにちは",
+                                                           "hello こんにちは"),
+                                        new MessageAction("Say message",
+                                                          "Rice=米")
+                                )),
+                                new CarouselColumn(imageUrl5, "Bayam Merah", "fuga", Arrays.asList(
+                                        new PostbackAction("Beli",
+                                                           "hello こんにちは",
+                                                           "hello こんにちは"),
+                                        new MessageAction("Say message",
+                                                          "Rice=米")
+                                )),
+                                new CarouselColumn(imageUrl6, "Caisim", "fuga", Arrays.asList(
+                                        new PostbackAction("Beli",
+                                                           "hello こんにちは",
+                                                           "hello こんにちは"),
+                                        new MessageAction("Say message",
+                                                          "Rice=米")
+                                )),
+                                new CarouselColumn(imageUrl7, "Selada Merah", "fuga", Arrays.asList(
+                                        new PostbackAction("Beli",
+                                                           "hello こんにちは",
+                                                           "hello こんにちは"),
+                                        new MessageAction("Say message",
+                                                          "Rice=米")
+                                )),
+                                new CarouselColumn(imageUrl8, "Bayam", "fuga", Arrays.asList(
+                                        new PostbackAction("Beli",
+                                                           "hello こんにちは",
+                                                           "hello こんにちは"),
+                                        new MessageAction("Say message",
+                                                          "Rice=米")
+                                )),
                         ));
-                TemplateMessage templateMessage = new TemplateMessage("Carousel alt text", carouselTemplate);
+                TemplateMessage templateMessage = new TemplateMessage("Jenis Sayuran", carouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
             }
-            case "imagemap":
+            case "imagemap": {
                 this.reply(replyToken, new ImagemapMessage(
                         createUri("/static/rich"),
                         "This is alt text",
@@ -380,6 +422,7 @@ public class KitchenSinkController {
                 );
                 break;
         }
+            
     }
 
     private static String createUri(String path) {
