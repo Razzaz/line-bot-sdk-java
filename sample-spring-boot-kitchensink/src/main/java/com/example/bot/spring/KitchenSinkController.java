@@ -164,13 +164,13 @@ public class KitchenSinkController {
     @EventMapping
     public void handleFollowEvent(FollowEvent event) {
         String replyToken = event.getReplyToken();
-        this.replyText(replyToken, "Got followed event");
+        this.replyText(replyToken, "GoGoFarm is a social enterprise aims to make Indonesia healthy by building the culture of growing your own food and providing rich variety of home-growing organic foods.");
     }
 
     @EventMapping
     public void handleJoinEvent(JoinEvent event) {
         String replyToken = event.getReplyToken();
-        this.replyText(replyToken, "Joined " + event.getSource());
+        this.replyText(replyToken, "GoGoFarm is a social enterprise aims to make Indonesia healthy by building the culture of growing your own food and providing rich variety of home-growing organic foods.");
     }
 
     @EventMapping
@@ -289,21 +289,20 @@ public class KitchenSinkController {
                 break;
             }
             case "buttons": {
-                String imageUrl = createUri("/static/buttons/1040.jpg");
+                String imageUrl = createUri("/static/buttons/S001.jpeg");
                 ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
                         imageUrl,
-                        "My button sample",
-                        "Hello, my button",
+                        "Selamat Datang!",
+                        "Grow Your Own Food",
                         Arrays.asList(
-                                new URIAction("Go to line.me",
-                                              "https://line.me"),
-                                new PostbackAction("Say hello1",
-                                                   "hello こんにちは"),
-                                new PostbackAction("言 hello2",
-                                                   "hello こんにちは",
-                                                   "hello こんにちは"),
-                                new MessageAction("Say message",
-                                                  "Rice=米")
+                                new URIAction("Location",
+                                              "https://goo.gl/maps/9zsbfDo5m8u"),
+                                new MessageAction("Our Product",
+                                                  "Our Product"),
+                                new MessageAction("Free Ticket",
+                                                  "Free Ticket"),
+                                new MessageAction("Event",
+                                                  "Event")
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("Button alt text", buttonsTemplate);
                 this.reply(replyToken, templateMessage);
@@ -319,13 +318,8 @@ public class KitchenSinkController {
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
                                 new CarouselColumn(imageUrl1, "Selada", "Rp. 15.000/Kg", Arrays.asList(
-                                        new URIAction("Beli",
-                                                      new ConfirmTemplate(
-                                                          "Do it?",
-                                                         new MessageAction("Yes", "Yes!"),
-                                                         new MessageAction("No", "No!"))
-                            
-                                                      ),
+                                        new URIAction("Beli"
+                                                      "http://line.me"),
                                         new PostbackAction("Beli",
                                                            "hello こんにちは")
                                 )),
@@ -354,7 +348,7 @@ public class KitchenSinkController {
                                         new PostbackAction("Beli",
                                                            "hello こんにちは",
                                                            "hello こんにちは"),
-                                        new MessageAction("Say message",
+                                        new MessageAction("Next",
                                                           "Rice=米")
                                 ))
                         ));
