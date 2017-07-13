@@ -323,7 +323,7 @@ public class KitchenSinkController {
                                                       new ConfirmTemplate(
                                                           "Do it?",
                                                          new MessageAction("Yes", "Yes!"),
-                                                         new MessageAction("No", "No!"));
+                                                         new MessageAction("No", "No!"))
                             
                                                       ),
                                         new PostbackAction("Beli",
