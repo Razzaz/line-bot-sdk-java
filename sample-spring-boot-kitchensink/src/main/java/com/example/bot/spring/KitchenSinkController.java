@@ -311,13 +311,21 @@ public class KitchenSinkController {
             }
             case "carousel": {
                 String imageUrl = createUri("/static/buttons/1040.jpg");
+                String imageUrl1 = createUri("/static/buttons/S002/jpeg);
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
-                                new CarouselColumn("https://github.com/Razzaz/razzaz.github.io/blob/master/img/Base.png", "hoge", "fuga", Arrays.asList(
+                                new CarouselColumn(imageUrl1, "Selada", "Rp. 15.000/Kg", Arrays.asList(
                                         new URIAction("Go to line.me",
                                                       "https://line.me"),
-                                        new PostbackAction("Say hello1",
+                                        new PostbackAction("Beli",
                                                            "hello こんにちは")
+                                )),
+                                new CarouselColumn(imageUrl, "hoge", "fuga", Arrays.asList(
+                                        new PostbackAction("言 hello2",
+                                                           "hello こんにちは",
+                                                           "hello こんにちは"),
+                                        new MessageAction("Say message",
+                                                          "Rice=米")
                                 )),
                                 new CarouselColumn(imageUrl, "hoge", "fuga", Arrays.asList(
                                         new PostbackAction("言 hello2",
