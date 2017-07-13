@@ -316,9 +316,6 @@ public class KitchenSinkController {
                 String imageUrl3 = createUri("/static/buttons/S004.jpeg");
                 String imageUrl4 = createUri("/static/buttons/S005.jpeg");
                 String imageUrl5 = createUri("/static/buttons/S006.jpeg");
-                String imageUrl6 = createUri("/static/buttons/S007.jpeg");
-                String imageUrl7 = createUri("/static/buttons/S008.jpeg");
-                String imageUrl8 = createUri("/static/buttons/S009.jpeg");
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
                                 new CarouselColumn(imageUrl1, "Selada", "Rp. 15.000/Kg", Arrays.asList(
@@ -354,7 +351,18 @@ public class KitchenSinkController {
                                                            "hello こんにちは"),
                                         new MessageAction("Say message",
                                                           "Rice=米")
-                                )),
+                                ))
+                        ));
+                TemplateMessage templateMessage = new TemplateMessage("Jenis Sayuran", carouselTemplate);
+                this.reply(replyToken, templateMessage);
+                break;
+            }
+            case "carousel2":{
+                String imageUrl6 = createUri("/static/buttons/S007.jpeg");
+                String imageUrl7 = createUri("/static/buttons/S008.jpeg");
+                String imageUrl8 = createUri("/static/buttons/S009.jpeg");
+                CarouselTemplate carouselTemplate = new CarouselTemplate(
+                        Arrays.asList(
                                 new CarouselColumn(imageUrl6, "Caisim", "fuga", Arrays.asList(
                                         new PostbackAction("Beli",
                                                            "hello こんにちは",
@@ -376,7 +384,7 @@ public class KitchenSinkController {
                                         new MessageAction("Say message",
                                                           "Rice=米")
                                 ))
-                        ));
+                          ));
                 TemplateMessage templateMessage = new TemplateMessage("Jenis Sayuran", carouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
