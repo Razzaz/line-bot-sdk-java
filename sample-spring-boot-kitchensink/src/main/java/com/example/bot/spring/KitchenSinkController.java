@@ -375,13 +375,13 @@ public class KitchenSinkController {
                                                            "hello こんにちは"),
                                         new MessageAction("Say message",
                                                           "Rice=米")
-                                )),
+                                ))
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("Jenis Sayuran", carouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
             }
-            case "imagemap": {
+            case "imagemap":
                 this.reply(replyToken, new ImagemapMessage(
                         createUri("/static/rich"),
                         "This is alt text",
