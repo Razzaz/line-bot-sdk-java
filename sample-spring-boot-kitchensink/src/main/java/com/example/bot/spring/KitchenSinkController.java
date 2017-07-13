@@ -320,7 +320,12 @@ public class KitchenSinkController {
                         Arrays.asList(
                                 new CarouselColumn(imageUrl1, "Selada", "Rp. 15.000/Kg", Arrays.asList(
                                         new URIAction("Beli",
-                                                      "https://line.me"),
+                                                      new ConfirmTemplate(
+                                                          "Do it?",
+                                                         new MessageAction("Yes", "Yes!"),
+                                                         new MessageAction("No", "No!"));
+                            
+                                                      ),
                                         new PostbackAction("Beli",
                                                            "hello こんにちは")
                                 )),
