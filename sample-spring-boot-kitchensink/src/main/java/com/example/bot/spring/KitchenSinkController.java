@@ -314,74 +314,70 @@ public class KitchenSinkController {
                 String imageUrl2 = createUri("/static/buttons/S003.jpeg");
                 String imageUrl3 = createUri("/static/buttons/S004.jpeg");
                 String imageUrl4 = createUri("/static/buttons/S005.jpeg");
-                String imageUrl5 = createUri("/static/buttons/S006.jpeg");
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
-                                new CarouselColumn(imageUrl1, "Selada", "Rp. 15.000/Kg", Arrays.asList(
+                                new CarouselColumn(imageUrl1, "Selada", "Rp. 40.000/Kg", Arrays.asList(
                                         new URIAction("Beli",
                                                       "http://line.me"),
-                                        new PostbackAction("Beli",
-                                                           "hello こんにちは")
+                                        new PostbackAction("Deskripsi",
+                                                           "Deskripsi : Selada")
                                 )),
-                                new CarouselColumn(imageUrl2, "Kangkung", "fuga", Arrays.asList(
-                                        new PostbackAction("Beli",
-                                                           "hello こんにちは",
-                                                           "hello こんにちは"),
-                                        new MessageAction("Say message",
-                                                          "Rice=米")
+                                new CarouselColumn(imageUrl2, "Kangkung", "Rp. 20.000/Kg", Arrays.asList(
+                                        new URIAction("Beli",
+                                                      "http://line.me"),
+                                        new MessageAction("Deskripsi",
+                                                          "Deskripsi : Kangkung")
                                 )),
-                                new CarouselColumn(imageUrl3, "Bok Choy", "fuga", Arrays.asList(
-                                        new PostbackAction("Beli",
-                                                           "hello こんにちは",
-                                                           "hello こんにちは"),
-                                        new MessageAction("Say message",
-                                                          "Rice=米")
+                                new CarouselColumn(imageUrl3, "Bok Choy", "Rp. 15.000/Kg", Arrays.asList(
+                                        new URIAction("Beli",
+                                                      "http://line.me"),
+                                        new MessageAction("Deskripsi",
+                                                          "Deskripsi : Bok Choy")
                                 )),
-                                new CarouselColumn(imageUrl4, "Kailan", "fuga", Arrays.asList(
-                                        new PostbackAction("Beli",
-                                                           "hello こんにちは",
-                                                           "hello こんにちは"),
-                                        new MessageAction("Say message",
-                                                          "Rice=米")
-                                )),
-                                new CarouselColumn(imageUrl5, "Bayam Merah", "fuga", Arrays.asList(
-                                        new PostbackAction("Beli",
-                                                           "hello こんにちは",
-                                                           "hello こんにちは"),
+                                new CarouselColumn(imageUrl4, "Kailan", "Rp. 15.000/Kg", Arrays.asList(
+                                        new URIAction("Beli",
+                                                       "http://line.me"),
+                                        new MessageAction("Deskripsi",
+                                                          "Deskripsi : Kailan")
                                         new MessageAction("Next",
                                                           "Next")
                                 ))
+                                
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("Jenis Sayuran", carouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
             }
             case "Next":{
+                String imageUrl5 = createUri("/static/buttons/S006.jpeg");
                 String imageUrl6 = createUri("/static/buttons/S007.jpeg");
                 String imageUrl7 = createUri("/static/buttons/S008.jpeg");
                 String imageUrl8 = createUri("/static/buttons/S009.jpeg");
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
-                                new CarouselColumn(imageUrl6, "Caisim", "fuga", Arrays.asList(
-                                        new PostbackAction("Beli",
-                                                           "hello こんにちは",
-                                                           "hello こんにちは"),
-                                        new MessageAction("Say message",
-                                                          "Rice=米")
+                                new CarouselColumn(imageUrl5, "Bayam Merah", "Rp. 25.000/Kg", Arrays.asList(
+                                        new URIAction("Beli",
+                                                      "http://line.me"),
+                                        new MessageAction("Deskripsi",
+                                                          "Deskripsi : Bayam Merah")
                                 )),
-                                new CarouselColumn(imageUrl7, "Selada Merah", "fuga", Arrays.asList(
-                                        new PostbackAction("Beli",
-                                                           "hello こんにちは",
-                                                           "hello こんにちは"),
-                                        new MessageAction("Say message",
-                                                          "Rice=米")
+                                new CarouselColumn(imageUrl6, "Caisim", "Rp. 15.000/Kg", Arrays.asList(
+                                        new URIAction("Beli",
+                                                      "http://line.me"),
+                                        new MessageAction("Deskripsi",
+                                                          "Deskripsi : Caisim")
                                 )),
-                                new CarouselColumn(imageUrl8, "Bayam", "fuga", Arrays.asList(
-                                        new PostbackAction("Beli",
-                                                           "hello こんにちは",
-                                                           "hello こんにちは"),
-                                        new MessageAction("Say message",
-                                                          "Rice=米")
+                                new CarouselColumn(imageUrl7, "Selada Merah", "Rp. 50.000", Arrays.asList(
+                                        new URIAction("Beli",
+                                                        "http://line.me"),
+                                        new MessageAction("Deskripsi",
+                                                          "Deskripsi : Selada Merah")
+                                )),
+                                new CarouselColumn(imageUrl8, "Bayam", "Rp. 20.000/Kg", Arrays.asList(
+                                        new URIAction("Beli",
+                                                           "http://line.me"),
+                                        new MessageAction("Deskripsi",
+                                                          "Deskripsi : Bayam")
                                 ))
                           ));
                 TemplateMessage templateMessage = new TemplateMessage("Jenis Sayuran", carouselTemplate);
