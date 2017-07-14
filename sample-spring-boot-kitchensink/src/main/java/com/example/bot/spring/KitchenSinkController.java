@@ -299,12 +299,12 @@ public class KitchenSinkController {
                                               "https://goo.gl/maps/9zsbfDo5m8u"),
                                 new MessageAction("Our Product",
                                                   "Our Product"),
-                                new MessageAction("Free Ticket",
-                                                  "Free Ticket"),
+                                new MessageAction("Free Coupon",
+                                                  "Free Coupon"),
                                 new MessageAction("Event",
                                                   "Event")
                         ));
-                TemplateMessage templateMessage = new TemplateMessage("Button alt text", buttonsTemplate);
+                TemplateMessage templateMessage = new TemplateMessage("Menu", buttonsTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
             }
@@ -422,11 +422,11 @@ public class KitchenSinkController {
                 ));
                 break;
             default:
-                log.info("Returns echo message {}: {}", replyToken, text);
+                /*log.info("Returns echo message {}: {}", replyToken, text);
                 this.replyText(
                         replyToken,
                         text
-                );
+                );*/
                 break;
         }
             
