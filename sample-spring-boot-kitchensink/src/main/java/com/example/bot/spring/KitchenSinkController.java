@@ -338,7 +338,7 @@ public class KitchenSinkController {
                                         new URIAction("Beli",
                                                        "http://line.me"),
                                         new MessageAction("Deskripsi",
-                                                          "Deskripsi : Kailan")
+                                                          "Deskripsi : Kailan"),
                                         new MessageAction("Next",
                                                           "Next")
                                 ))
