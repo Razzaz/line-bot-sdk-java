@@ -308,7 +308,7 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
-            case "carousel": {
+            case "Our Product": {
                 String imageUrl = createUri("/static/buttons/1040.jpg");
                 String imageUrl1 = createUri("/static/buttons/S002.jpeg");
                 String imageUrl2 = createUri("/static/buttons/S003.jpeg");
@@ -341,7 +341,7 @@ public class KitchenSinkController {
                                         new MessageAction("Deskripsi",
                                                           "Deskripsi : Kailan")
                                 )),
-                                new CarouselColumn(imageUrl00, "More", Arrays.asList(
+                                new CarouselColumn(imageUrl00, "More","Tap Next Button Below", Arrays.asList(
                                         new MessageAction("Next",
                                                           "Next")
                                 ))
