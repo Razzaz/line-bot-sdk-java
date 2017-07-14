@@ -349,7 +349,7 @@ public class KitchenSinkController {
                                                            "hello こんにちは",
                                                            "hello こんにちは"),
                                         new MessageAction("Next",
-                                                          "Rice=米")
+                                                          "Next")
                                 ))
                         ));
                 TemplateMessage templateMessage = new TemplateMessage("Jenis Sayuran", carouselTemplate);
