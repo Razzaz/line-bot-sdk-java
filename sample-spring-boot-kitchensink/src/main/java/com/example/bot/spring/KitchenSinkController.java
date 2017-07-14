@@ -356,7 +356,7 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
-            case "carousel2":{
+            case "Next":{
                 String imageUrl6 = createUri("/static/buttons/S007.jpeg");
                 String imageUrl7 = createUri("/static/buttons/S008.jpeg");
                 String imageUrl8 = createUri("/static/buttons/S009.jpeg");
