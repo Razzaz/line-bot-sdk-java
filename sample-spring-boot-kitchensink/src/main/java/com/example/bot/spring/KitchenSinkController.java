@@ -320,7 +320,7 @@ public class KitchenSinkController {
                                 new CarouselColumn(imageUrl1, "Selada", "Rp. 40.000/Kg", Arrays.asList(
                                         new URIAction("Beli",
                                                       "http://line.me"),
-                                        new PostbackAction("Deskripsi",
+                                        new MessageAction("Deskripsi",
                                                            "Deskripsi : Selada")
                                 )),
                                 new CarouselColumn(imageUrl2, "Kangkung", "Rp. 20.000/Kg", Arrays.asList(
@@ -348,7 +348,7 @@ public class KitchenSinkController {
                                 ))
                                 
                         ));
-                TemplateMessage templateMessage = new TemplateMessage("Jenis Sayuran", carouselTemplate);
+                TemplateMessage templateMessage = new TemplateMessage("Our Product", carouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
             }
@@ -384,7 +384,7 @@ public class KitchenSinkController {
                                                           "Deskripsi : Bayam")
                                 ))
                           ));
-                TemplateMessage templateMessage = new TemplateMessage("Jenis Sayuran", carouselTemplate);
+                TemplateMessage templateMessage = new TemplateMessage("Our Product", carouselTemplate);
                 this.reply(replyToken, templateMessage);
                 break;
             }
