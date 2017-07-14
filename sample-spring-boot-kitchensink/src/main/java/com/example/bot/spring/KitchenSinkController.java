@@ -288,7 +288,7 @@ public class KitchenSinkController {
                 this.reply(replyToken, templateMessage);
                 break;
             }
-            case "buttons": {
+            case "Hi": {
                 String imageUrl = createUri("/static/buttons/S001.jpeg");
                 ButtonsTemplate buttonsTemplate = new ButtonsTemplate(
                         imageUrl,
