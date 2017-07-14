@@ -343,7 +343,8 @@ public class KitchenSinkController {
                                 )),
                                 new CarouselColumn(imageUrl00, "More","Tap Next Button Below", Arrays.asList(
                                         new MessageAction("Next",
-                                                          "Next")
+                                                          "Next"),
+                                        new MessageAction(" ", " ")
                                 ))
                                 
                         ));
