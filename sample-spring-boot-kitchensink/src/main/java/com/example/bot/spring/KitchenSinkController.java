@@ -314,6 +314,7 @@ public class KitchenSinkController {
                 String imageUrl2 = createUri("/static/buttons/S003.jpeg");
                 String imageUrl3 = createUri("/static/buttons/S004.jpeg");
                 String imageUrl4 = createUri("/static/buttons/S005.jpeg");
+                String imageUrl00 = createUri("/static/buttons/S010.jpg");
                 CarouselTemplate carouselTemplate = new CarouselTemplate(
                         Arrays.asList(
                                 new CarouselColumn(imageUrl1, "Selada", "Rp. 40.000/Kg", Arrays.asList(
@@ -338,7 +339,9 @@ public class KitchenSinkController {
                                         new URIAction("Beli",
                                                        "http://line.me"),
                                         new MessageAction("Deskripsi",
-                                                          "Deskripsi : Kailan"),
+                                                          "Deskripsi : Kailan")
+                                )),
+                                new CarouselColumn(imageUrl00, "More", Arrays.asList(
                                         new MessageAction("Next",
                                                           "Next")
                                 ))
@@ -367,7 +370,7 @@ public class KitchenSinkController {
                                         new MessageAction("Deskripsi",
                                                           "Deskripsi : Caisim")
                                 )),
-                                new CarouselColumn(imageUrl7, "Selada Merah", "Rp. 50.000", Arrays.asList(
+                                new CarouselColumn(imageUrl7, "Selada Merah", "Rp. 50.000/Kg", Arrays.asList(
                                         new URIAction("Beli",
                                                         "http://line.me"),
                                         new MessageAction("Deskripsi",
