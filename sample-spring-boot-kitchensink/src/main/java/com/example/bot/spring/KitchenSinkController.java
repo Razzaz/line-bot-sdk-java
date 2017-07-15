@@ -390,7 +390,7 @@ public class KitchenSinkController {
             }
             case "imagemap":
                 this.reply(replyToken, new ImagemapMessage(
-                        createUri("/static/rich/1040"),
+                        createUri("/static/rich/S012"),
                         "This is alt text",
                         new ImagemapBaseSize(1040, 1040),
                         Arrays.asList(
