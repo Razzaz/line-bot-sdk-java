@@ -176,7 +176,7 @@ public class KitchenSinkController {
     @EventMapping
     public void handlePostbackEvent(PostbackEvent event) {
         String replyToken = event.getReplyToken();
-        this.replyText(replyToken, "Got postback " + event.getPostbackContent().getData());
+        this.replyText(replyToken, event.getPostbackContent().getData()); //Dihapus postback nya
     }
 
     @EventMapping
@@ -268,10 +268,10 @@ public class KitchenSinkController {
             case "bye": {
                 Source source = event.getSource();
                 if (source instanceof GroupSource) {
-                    this.replyText(replyToken, "Leaving group");
+                    this.replyText(replyToken, "See you!");
                     lineMessagingClient.leaveGroup(((GroupSource) source).getGroupId()).get();
                 } else if (source instanceof RoomSource) {
-                    this.replyText(replyToken, "Leaving room");
+                    this.replyText(replyToken, "See you!");
                     lineMessagingClient.leaveRoom(((RoomSource) source).getRoomId()).get();
                 } else {
                     this.replyText(replyToken, "Bot can't leave from 1:1 chat");
