@@ -278,7 +278,7 @@ public class KitchenSinkController {
                 }
                 break;
             }
-            case "confirm": {
+            case "gundul": {
                 ConfirmTemplate confirmTemplate = new ConfirmTemplate(
                         "Do it?",
                         new MessageAction("Yes", "Yes!"),
@@ -324,8 +324,8 @@ public class KitchenSinkController {
                                                            "Deskripsi : Selada")
                                 )),
                                 new CarouselColumn(imageUrl2, "Kangkung", "Rp. 20.000/Kg", Arrays.asList(
-                                        new URIAction("Beli",
-                                                      "http://line.me"),
+                                        new PostBackAction("Beli",
+                                                      "gundul"),
                                         new MessageAction("Deskripsi",
                                                           "Deskripsi : Kangkung")
                                 )),
