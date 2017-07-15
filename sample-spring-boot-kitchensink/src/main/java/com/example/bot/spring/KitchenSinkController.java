@@ -324,9 +324,9 @@ public class KitchenSinkController {
                                                            "Deskripsi : Selada")
                                 )),
                                 new CarouselColumn(imageUrl2, "Kangkung", "Rp. 20.000/Kg", Arrays.asList(
-                                        new PostBackAction("Beli",
-                                                      "gundul"),
-                                        new MessageAction("Deskripsi",
+                                        new URIAction("Beli",
+                                                      "http://line.me"),
+                                        new PostBackAction("Deskripsi",
                                                           "Deskripsi : Kangkung")
                                 )),
                                 new CarouselColumn(imageUrl3, "Bok Choy", "Rp. 15.000/Kg", Arrays.asList(
