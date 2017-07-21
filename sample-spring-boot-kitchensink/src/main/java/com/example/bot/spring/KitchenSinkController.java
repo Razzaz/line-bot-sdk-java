@@ -326,8 +326,7 @@ public class KitchenSinkController {
                                 new CarouselColumn(imageUrl2, "Kangkung", "Rp. 20.000/Kg", Arrays.asList(
                                         new URIAction("Beli",
                                                       "http://line.me"),
-                                        new PostbackAction("Deskripsi",
-                                                          "confirm", "confirm")
+                                        new PostbackAction("Deskripsi")
                                 )),
                                 new CarouselColumn(imageUrl3, "Bok Choy", "Rp. 15.000/Kg", Arrays.asList(
                                         new URIAction("Beli",
